@@ -214,8 +214,8 @@ CloseHandle(hEvent);
   int main() {
       Animal a;
       Dog d;
-      makeAnimalSound(&a);  // Выводит: Some sound
-      makeAnimalSound(&d);  // Выводит: Bark
+      makeAnimalSound(&a);
+      makeAnimalSound(&d);
   }
   ```
 
