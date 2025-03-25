@@ -11,7 +11,7 @@ std::vector<unsigned long long> generateFactorials(int n) {
     }
 
     std::vector<unsigned long long> factorials;
-    factorials.push_back(1); // 0! = 1
+    factorials.push_back(1);
 
     for (int i = 1; i < n; ++i) {
         factorials.push_back(factorials.back() * i);
@@ -129,7 +129,6 @@ int main() {
 ```
 ---
 
-Ниже приведены примеры юнит-тестов для каждой из задач, использующих библиотеку Google Test (gtest). Эти тесты покрывают основные сценарии использования каждой функции и обрабатывают исключительные ситуации.
 
 ### Задача 1: Юнит-тесты для функции `generateFactorials`
 
@@ -151,8 +150,8 @@ TEST(FactorialTest, Correctness) {
 
 
 TEST(FactorialTest, Exception) {
-    EXPECT_THROW(generateFactorials(0), std::invalid_argument); // n <= 0
-    EXPECT_THROW(generateFactorials(-5), std::invalid_argument); // n < 0
+    EXPECT_THROW(generateFactorials(0), std::invalid_argument);
+    EXPECT_THROW(generateFactorials(-5), std::invalid_argument);
 }
 ```
 
